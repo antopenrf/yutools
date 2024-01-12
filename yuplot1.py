@@ -65,15 +65,15 @@ plt.plot(data_I, 'r', label = 'I')
 plt.plot(data_Q, 'b', label = 'Q')
 plt.xlabel('NFFT Point')
 plt.ylabel('I and Q reading')
-plt.title('60GHz radar plot, Time Series, Number of Chirps:' + str(noc))
+plt.title('60GHz radar plot, Number of Chirps:' + str(noc))
 
 
 plt.subplot(1, 2, 2)
 plt.plot(data_I, data_Q)
 plt.xlabel('I')
 plt.ylabel('Q')
-plt.title('60GHz radar plot, Phase Plot, Number of Chirps:' + str(noc))
+plt.title('Phase Plot')
 
-
+plt.gcf().set_size_inches(10, 5)
 plt.savefig(input_file[:-4] + '.png')
 plt.show()
